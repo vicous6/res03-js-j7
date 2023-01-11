@@ -1,15 +1,24 @@
-import { Pizza } from './pizza.js';
-
+import { Item } from './item.js';
 
 
 
 window.addEventListener("DOMContentLoaded", function(){
     
-   let vegie = new Pizza("veggie","tomate","fromage", "legume");
-   let LaMeattie = new Pizza("La-Meattie","tomate","fromage", "viande");
-   let Fishie = new Pizza("Fishie","tomate","fromage", "poisson");
-    console.log(vegie);
-    console.log(LaMeattie);
-    console.log(Fishie)
-        
+   let button = document.getElementById("button");
+   
+   let textInput = document.getElementById("input");
+   
+  
+   
+   console.log(button , textInput)
+  button.addEventListener('click', function(){
+       
+       
+     let objet =  new Item (textInput.value)
+     
+     objet.addToHtml()
+     objet.clearInput()
+     
+  })
+   
 });
